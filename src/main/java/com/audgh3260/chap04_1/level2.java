@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class level2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("1~10 사이의 숫자를 입력하세요 ");
+        System.out.print("1~10 사이의 숫자를 입력하세요 : ");
         int a = sc.nextInt();
         String str = "반드시 1~10 사이의 정수를 입력해야 합니다.";
         if (a > 0 && a < 11) {
@@ -13,7 +13,7 @@ public class level2 {
         }
         System.out.println(str);
 
-        System.out.println("체중(kg)과 신장(m)을 입력하세요");
+        System.out.print("체중(kg)과 신장(m)을 입력하세요");
         double kg = sc.nextDouble();
         double m = sc.nextDouble();
 
@@ -31,5 +31,7 @@ public class level2 {
         else str = "비만";
         System.out.println(bmi);
         System.out.println(str);
+
+        sc.close();
     }
 }
