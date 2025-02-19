@@ -1,34 +1,30 @@
 package com.audgh3260.chap04_2;
-
+import java.util.Scanner;
 public class level2 {
     public static void main(String[] args) {
-        /* 문자열을 입력 받아서 문자열의 각 인덱스별로 한 글자씩 출력하세요
-         *
-         * 참고) 문자열의 길이는 String 클래스의 length() 메소드를 이용할 수 있습니다.
-         *
-         * -- 입력 예시 --
-         * 문자열을 입력하세요 : apple
-         *
-         * -- 출력 예시 --
-         * 0 : a
-         * 1 : p
-         * 2 : p
-         * 3 : l
-         * 4 : e
-         * */
-        /* 반복문을 이용하여 알파벳 소문자 'a'부터 'z'까지를 개행 없이 차례로 출력하세요
-         *
-         * -- 출력 예시 --
-         * abcdefghijklmnopqrstuvwxyz
-         * */
-        /* 정수를 입력받아 1부터 입력받은 정수까지
-         * 홀수이면 "수", 짝수이면 "박"이 정수만큼 누적되어 출력되게 작성하시오.
-         *
-         * -- 입력 예시 --
-         * 정수를 입력하세요 : 5
-         *
-         * -- 출력 예시 --
-         * 수박수박수
-         * */
+        Scanner sc = new Scanner(System.in);
+        System.out.print("문자열 입력 : ");
+        String str = sc.nextLine();
+        char[] ch = new char[str.length()];
+        for(int i = 0; i < str.length(); i++) {
+            ch[i] = str.charAt(i);
+        }
+        for(int i = 0; i < ch.length; i++) {
+            System.out.println("" + i + ":" + ch[i]);
+        }
+        String str2 = "";
+        for(char i = 'a'; i <= 'z'; i++) {
+            str2 += i;
+        }
+        System.out.println(str2);
+
+        System.out.print("정수 입력 : ");
+        int num = sc.nextInt();
+        sc.close();
+        String str3 = "";
+        for(int i = 1; i <= num; i++) {
+            str3 += (i%2==0)?"박":"수";
+        }
+        System.out.println(str3);
     }
 }
