@@ -26,7 +26,7 @@ public class Application2 {
             String input = sc.next();
 
             // 입력 검증 (4자리 숫자인지 확인)
-            if (input.length() != 4 || !input.matches("\\d{4}")) {
+            if (input.length() > 4) {
                 System.out.println("4자리의 정수를 입력해야 합니다.");
                 continue;
             }
