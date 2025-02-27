@@ -1,5 +1,3 @@
-package com.audgh3260.chap11
-
 plugins {
     id 'java'
 }

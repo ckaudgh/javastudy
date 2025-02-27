@@ -1,5 +1,5 @@
 .gradle
-../src/main/java/com/audgh3260/chap12/build/
+build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
