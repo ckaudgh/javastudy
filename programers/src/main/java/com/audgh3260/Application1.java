@@ -1,22 +1,25 @@
 package com.audgh3260;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 class Solution {
-    public int solution(int[] nums) {
+    public int solution(int n) {
         int answer = 0;
-        HashSet<Integer> hset = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            hset.add(nums[i]);
+        for(int i = 1; i <= n; i++){
+            int cnt = 0;
+            for(int j = 1; j <= i; j++){
+                if(i%j == 0) cnt++;
+            }
+            if(cnt==2)answer++;
         }
-        if(hset.size()<nums.length/2) answer = hset.size();
-        else answer = nums.length/2;
+
         return answer;
     }
 }
 public class Application1 {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.solution(new int[]{2,2,2,3,3,3,2,2}));
+        System.out.println(solution.solution(10));
     }
 }
